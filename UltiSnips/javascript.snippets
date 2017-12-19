@@ -39,7 +39,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Wrap } from './styled';
 
-const ${1:`!v expand('%:t:r')`} = ({...props}) => (
+const ${1:`!v expand('%:t:r')`} = ({ ...props }) => (
 	<Wrap>
 		$3
 	</Wrap>
@@ -80,15 +80,13 @@ endsnippet
 snippet rfc "React Functional Component" b
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './${2:$1}.css';
+import { Wrap } from './styled';
 
-function ${1:`!v expand('%:t:r')`}(${3:{...props}}) {
-	return (
-		<div className={styles.base}>
-			$4
-		</div>
-	);
-}
+const ${1:`!v expand('%:t:r')`} = (${3:{...props}}) => (
+	<Wrap>
+		$4
+	</Wrap>
+);
 
 $1.defaultProps = {};
 
