@@ -32,6 +32,24 @@ function mapStateToProps(state) {
 export default connect(mapStateToProps)($1);
 endsnippet
 
+# React & JSX
+snippet rcfc "React Connected Functional Component" b
+import React from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { Wrap } from './styled';
+
+const ${1:`!v expand('%:t:r')`} = ({...props}) => (
+	<Wrap>
+		$3
+	</Wrap>
+);
+
+const mapStateToProps = state => ({});
+
+export default connect(mapStateToProps)($1);
+endsnippet
+
 snippet rcc "React Class Component" b
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
